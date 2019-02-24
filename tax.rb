@@ -1,4 +1,4 @@
-require "byebug"
+# require "byebug"
 
 class Tax
   BASE = 1.1
@@ -14,10 +14,10 @@ class Tax
   end
 
   def taxable?
-    !@product.name.match(/.*book|choco|pills/i)
+    !@product.name.match?(/.*book|choco|pills/i)
   end
 
   def imported?
-    @product.name.match /.*imported/i
+    @product.name.match?(/.*imported/i)
   end
 end
